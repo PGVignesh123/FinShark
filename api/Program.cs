@@ -10,11 +10,18 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+var connectionString = builder.Configuration
+    .GetConnectionString("DefaultConnection") 
+    ?? throw new Exception("Connection string not found.");
+
 builder.Services.AddDbContext<ApplicationDBcontext>(options =>
 {
-    options.UseSqlite("Data Source=finshark.db");
+    if (connectionString.Contains("Data Source="))
+        options.UseSqlite(connectionString);
+    else
+        options.UseSqlServer(connectionString);
 });
-
+Console.WriteLine($"Using connection: {connectionString}");
 builder.Services.AddScoped<IStockRepository, StockRepository>();
     
 
