@@ -1,6 +1,7 @@
 using api.Data;
 using Microsoft.EntityFrameworkCore;
-
+using api.Interfaces;
+using api.Repository;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -11,8 +12,10 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<ApplicationDBcontext>(options =>
 {
-    options.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=finshark;Trusted_Connection=True;TrustServerCertificate=True");
+    options.UseSqlite("Data Source=finshark.db");
 });
+
+builder.Services.AddScoped<IStockRepository, StockRepository>();
     
 
 var app = builder.Build();
