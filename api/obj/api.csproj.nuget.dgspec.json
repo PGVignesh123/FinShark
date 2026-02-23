@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\Backend-P\\FinShark\\api\\api.csproj": {}
+    "D:\\Backend Proj\\FinShark\\api\\api.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\Backend-P\\FinShark\\api\\api.csproj": {
+    "D:\\Backend Proj\\FinShark\\api\\api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Backend-P\\FinShark\\api\\api.csproj",
+        "projectUniqueName": "D:\\Backend Proj\\FinShark\\api\\api.csproj",
         "projectName": "api",
-        "projectPath": "C:\\Projects\\Backend-P\\FinShark\\api\\api.csproj",
-        "packagesPath": "C:\\Users\\Vignesh.PG\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\Backend-P\\FinShark\\api\\obj\\",
+        "projectPath": "D:\\Backend Proj\\FinShark\\api\\api.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Backend Proj\\FinShark\\api\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Vignesh.PG\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -37,7 +43,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -67,6 +74,10 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.4, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
@@ -91,7 +102,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.418/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
